@@ -1,0 +1,2 @@
+Cipher text: XM
+Original message: IF
