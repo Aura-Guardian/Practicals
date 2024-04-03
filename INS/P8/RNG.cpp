@@ -12,24 +12,36 @@ vector<int> linear_congruential(int a, int c, int m, int Xo, int n) {
     return random_number;
 }
 
-
+vector<int> blum_blum_shub(int n, int Xo, int no) {
+    vector<int> random_numbers;
+    int Xi = Xo;
+    for (int i = 0; i < no; i++) {
+        Xi = (Xi * Xi) % n;
+        random_numbers.push_back(Xi);
+    }
+    return random_numbers;
+}
 
 int main(){
     int a, c, m, Xo1;
     int p, q, n, Xo2;
     int no;
-    ifstream f1("bbs_parameters.txt");
-    // ifstream f2("lc_parameters.txt");
+    ifstream f1("lc_parameters.txt");
+    ifstream f2("bbs_parameters.txt");
     f1>>a>>c>>m>>Xo1;
-    // f2 >> p >> q >> Xo2;
-    cout<<a<<endl;
-    cout<<c<<endl;
-    cout<<m<<endl;
-    cout<<Xo1<<endl;
-    cout<<"Enter number of random numbers to generate: "<<endl;
+    f2 >> p >> q >> Xo2;
+    cout<<"Enter number of random numbers to generate: ";
     cin>>no;
+    cout<<"Linear Congruential: "<<endl;
     vector<int> nos1 = linear_congruential(a, c, m, Xo1, no);
     for(int i = 0; i < nos1.size(); i++){
         cout<<nos1[i]<<endl;
+    }
+
+    n = p * q;
+    cout<<"\nBlum Blum Shub : "<<endl;
+    vector<int> nos2 = blum_blum_shub(n, Xo2, no);
+        for(int i = 0; i < nos2.size(); i++){
+        cout<<nos2[i]<<endl;
     }
 }
