@@ -1,5 +1,7 @@
 {
     "files.associations": {
         "vector": "cpp"
-    }
+    },
+    "files.autoSave": "afterDelay",
+    "editor.fontFamily": "Jetbrains Mono"
 }
