@@ -1,0 +1,19 @@
+ID -> c
+Assignment operator -> =
+ID -> a
+Arithmetic operator -> +
+ID -> b
+Keyword -> for
+Special symbol-> (
+Keyword -> int
+ID -> i
+Assignment operator -> =
+Integer -> 0
+Special symbol-> ;
+ID -> i
+Relational operator -> <
+Integer -> 10
+Special symbol-> ;
+ID -> i
+Increment/Decrement operator -> ++
+Special symbol-> )
